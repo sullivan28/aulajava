@@ -1,0 +1,11 @@
+<h1>
+    Produtos no Estoque
+</h1>
+<button [routerLink]="['/cadastro']">Adicionar</button>
+<ul>
+    <li *ngFor="let produto of produtos">
+        <strong>{{produto.id}}</strong> - {{produto.descricao}} - - {{produto.marca}}- -{{produto.artigo}}- -{{produto.tamanho}}- -<em>{{produto.preco | currency:'R$'}} </em>
+        &nbsp;<button [routerLink]="['/editar', produto.id]">Editar</button>
+        &nbsp;<button (click)="excluir(produto)">Excluir</button>
+    </li>
+</ul>

@@ -1,0 +1,49 @@
+<h2>
+    Cadastro de Artigos Esportivos
+</h2>
+
+<form>
+    <p>
+        <label for="descricao">Descrição</label>
+        <input type="text"
+               name="descricao"
+               id="descricao"
+               [(ngModel)]="produto.descricao"
+               placeholder="Digite a descrição">
+    </p>
+    <p>
+        <label for="preco">Preço</label>
+        <input type="number"
+               name="preco"
+               id="preco"
+               [(ngModel)]="produto.preco">
+    </p>
+    <p>
+        <label for="marca">Marca</label>
+        <input type="text"
+               name="marca"
+               id="marca"
+               [(ngModel)]="produto.marca"
+               placeholder="Digite a marca">
+    </p>
+    <p>
+        <label for="tamanho">Tamanho</label>
+        <input type="number"
+               name="tamanho"
+               id="tamanho"
+               [(ngModel)]="produto.tamanho"
+               placeholder="Digite a tamanho">
+    </p>
+    <p>
+        <label for="Artigo">Artigo</label>
+        <input type="text"
+               name="artigo"
+               id="tamanho"
+               [(ngModel)]="produto.artigo"
+               placeholder="Digite o tipo de artigo">
+    </p>
+    <p>
+        <button (click)="salvar()">Salvar</button>
+        <button [routerLink]="['']">Cancelar</button>
+    </p>
+</form>
